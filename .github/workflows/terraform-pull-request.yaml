@@ -1,0 +1,20 @@
+name: Terraform Pull Request Tasks
+
+on:
+  pull_request:
+
+  workflow_dispatch:
+    inputs:
+      terraform_version:
+        description: Terraform version to create the infra
+        type: string
+        required: false
+        default: '1.5.1'
+
+
+jobs:
+  terraform:
+    uses: tf-init-nxp/terraform-reusable-workflow/.github/workflows/terraform-pull-request.yml@main
+    with:
+      terraform_version: $TERRAFORM_VERSION
+    secrets: inherit

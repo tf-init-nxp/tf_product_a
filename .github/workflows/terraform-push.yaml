@@ -1,0 +1,19 @@
+name: Terraform Push Tasks
+
+on:
+  push:
+
+  workflow_dispatch:
+    inputs:
+      terraform_version:
+        description: Terraform version to create the infra
+        type: string
+        required: false
+        default: '1.5.1'
+
+jobs:
+  terraform:
+    uses: tf-init-nxp/terraform-reusable-workflow/.github/workflows/terraform-push.yml@main
+    with:
+      terraform_version: ${{ inputs.terraform_version }}
+    secrets: inherit
