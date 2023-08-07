@@ -1,0 +1,12 @@
+soft-fail: true
+download-external-modules: false
+evaluate-variables: true
+external-modules-download-path: .external_modules
+framework:
+  - terraform
+output: cli
+quiet: false
+skip-fixes: false
+skip-check:
+  - CKV_AZURE_136
+  - CKV_TF_1

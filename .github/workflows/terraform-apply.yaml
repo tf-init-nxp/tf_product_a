@@ -1,0 +1,27 @@
+name: Terraform Apply
+
+on:
+
+  workflow_dispatch:
+    inputs:
+      terraform_version:
+        description: Terraform version to create the infra
+        type: string
+        required: false
+        default: '1.5.1'
+      apply:
+        type: boolean
+        required: false
+        default: false
+      destroy:
+        description: (yes/no)
+        type: string
+        required: false
+        default: no
+
+jobs:
+  terraform:
+    uses: tf-init-nxp/terraform-reusable-workflow/.github/workflows/terraform-apply.yml@main
+    with:
+      terraform_version: $TERRAFORM_VERSION
+    secrets: inherit

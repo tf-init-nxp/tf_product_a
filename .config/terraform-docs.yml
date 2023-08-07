@@ -1,0 +1,34 @@
+---
+# This file is automatically maintained within this module repository -- DO NOT EDIT
+formatter: "markdown"
+
+settings:
+  anchor: false
+  lockfile: false
+
+output:
+  file: "README.md"
+
+sections:
+  hide: [requirements]
+
+content: |-
+  # Terraform Module to create AZ Resources
+
+  ## Contributing
+  If you want to contribute to this repository, feel free to use our [pre-commit](https://pre-commit.com/) git hook configuration
+  which will help you automatically update and format some files for you by enforcing our Terraform code module best-practices.
+
+  ## Usage
+
+
+  {{ .Providers }}
+
+  {{ .Modules }}
+
+  {{ .Resources }}
+
+  {{ .Inputs }}
+
+  {{ .Outputs }}
+...
