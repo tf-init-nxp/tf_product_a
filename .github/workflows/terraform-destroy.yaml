@@ -24,5 +24,7 @@ jobs:
   terraform:
     uses: tf-init-nxp/terraform-reusable-workflow/.github/workflows/terraform-destroy.yml@main
     with:
-      terraform_version: $TERRAFORM_VERSION
+      terraform_version: ${{ inputs.terraform_version }}
+      destroy: ${{ inputs.destroy }}
+      answer: ${{ inputs.answer }}
     secrets: inherit
