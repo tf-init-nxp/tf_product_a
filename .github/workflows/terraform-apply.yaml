@@ -10,11 +10,12 @@ on:
         required: false
         default: '1.5.1'
       apply:
+        description: Apply Terraform infraestructure
         type: boolean
         required: false
         default: false
       destroy:
-        description: (yes/no)
+        description: Destroy Terraform infraestructure (yes/no)
         type: string
         required: false
         default: no
