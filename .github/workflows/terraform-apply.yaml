@@ -13,12 +13,12 @@ on:
         description: Apply
         type: boolean
         required: false
-        default: false
+        default: true
       destroy:
         description: Destroy (yes/no)
         type: string
         required: false
-        default: no
+        default: 'no'
 
 jobs:
   terraform:
