@@ -10,13 +10,11 @@ on:
         type: string
         required: false
         default: '1.5.1'
-
 permissions:
   id-token: write 
   contents: read
   pull-requests: write
   issues: write
-
 
 jobs:
   terraform:
