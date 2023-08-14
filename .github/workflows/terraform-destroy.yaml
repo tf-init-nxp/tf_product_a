@@ -1,0 +1,28 @@
+name: Terraform Destroa
+
+on:
+
+  workflow_dispatch:
+    inputs:
+      terraform_version:
+        description: Terraform version
+        type: string
+        required: false
+        default: '1.5.1'
+      destroy:
+        description: Destroy
+        type: boolean
+        required: false
+        default: true
+      answer:
+        description: Destroy (yes/no)
+        type: string
+        required: false
+        default: 'no'
+
+jobs:
+  terraform:
+    uses: tf-init-nxp/terraform-reusable-workflow/.github/workflows/terraform-destroy.yml@main
+    with:
+      terraform_version: $TERRAFORM_VERSION
+    secrets: inherit
