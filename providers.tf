@@ -5,6 +5,7 @@ provider "azurerm" {
 }
 
 terraform {
+  backend "remote" {}
   required_providers {
     azuread = {
       source  = "hashicorp/azuread"
