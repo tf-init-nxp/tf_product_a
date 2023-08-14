@@ -14,11 +14,7 @@ on:
         type: boolean
         required: false
         default: true
-      destroy:
-        description: Destroy (yes/no)
-        type: string
-        required: false
-        default: 'no'
+
 
 jobs:
   terraform:
@@ -26,5 +22,4 @@ jobs:
     with:
       terraform_version: ${{ inputs.terraform_version }}
       apply: ${{ inputs.apply }}
-      destroy: ${{ inputs.destroy }}
     secrets: inherit
