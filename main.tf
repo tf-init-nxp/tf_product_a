@@ -1,7 +1,7 @@
 locals {
   product_name = "product2"
   client_name  = "fulano"
-  rg_name      = format("%s-%s-%s", local.product_name, local.client_name,var.environment)
+  rg_name      = format("%s-%s-%s", local.product_name, local.client_name, var.environment)
 
   tags = { "product" = local.product_name,
     "client" = local.client_name,
@@ -36,7 +36,7 @@ module "product_a" {
   aks_enable                        = false
   keyvault_enable                   = false
   postgresql_flexible_server_enable = false
-  storage_account_enable            = false
+  storage_account_enable            = true
 
   ###
   #kured_chart_version = "4.6.0"
