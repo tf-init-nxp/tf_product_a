@@ -26,7 +26,9 @@ No resources.
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| environment | Environment where the will be deploy | `string` | `"dev"` | no |
 
 ## Outputs
 

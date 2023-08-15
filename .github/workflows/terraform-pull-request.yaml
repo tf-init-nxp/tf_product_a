@@ -10,9 +10,9 @@ on:
         type: string
         required: false
         default: '1.5.1'
-        
+
 permissions: write-all
-  #id-token: write 
+  #id-token: write
   #contents: read
   #pull-requests: write
   #issues: write
