@@ -33,9 +33,9 @@ module "product_a" {
   }
   postgresql_allowed_cidrs = { "User1" = "10.10.119.12/32", "User2" = "10.10.101.58/32" }
 
-  aks_enable                        = false
-  keyvault_enable                   = false
-  postgresql_flexible_server_enable = false
+  aks_enable                        = true
+  keyvault_enable                   = true
+  postgresql_flexible_server_enable = true
   storage_account_enable            = true
 
   ###
