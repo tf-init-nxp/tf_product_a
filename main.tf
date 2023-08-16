@@ -1,5 +1,5 @@
 locals {
-  product_name = "product3"
+  product_name = "product4"
   client_name  = "fulano"
   rg_name      = format("%s-%s-%s", local.product_name, local.client_name, var.environment)
 
