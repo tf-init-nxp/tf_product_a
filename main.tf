@@ -1,5 +1,5 @@
 locals {
-  product_name = "product3"
+  product_name = "product4"
   client_name  = "fulano"
   rg_name      = format("%s-%s-%s", local.product_name, local.client_name, var.environment)
 
@@ -12,7 +12,7 @@ locals {
 
 module "product_a" {
 
-  source      = "git::https://github.com/tf-init-nxp/tf_product_a_implementation.git?ref=main"
+  source      = "git::https://github.com/tf-init-nxp/tf_product_a_implementation.git?ref=v0.2"
   rg_location = local.location
   rg_name     = local.rg_name
   tags        = local.tags
