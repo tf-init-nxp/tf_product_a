@@ -12,7 +12,7 @@ locals {
 
 module "product_a" {
 
-  source      = "git::https://github.com/tf-init-nxp/tf_product_a_implementation.git?ref=v0.1"
+  source      = "git::https://github.com/tf-init-nxp/tf_product_a_implementation.git?ref=main"
   rg_location = local.location
   rg_name     = local.rg_name
   tags        = local.tags
@@ -35,7 +35,7 @@ module "product_a" {
 
   aks_enable                        = false
   keyvault_enable                   = true
-  postgresql_flexible_server_enable = false
+  postgresql_flexible_server_enable = true
   storage_account_enable            = false
 
   ###
