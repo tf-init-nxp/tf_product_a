@@ -12,7 +12,7 @@ locals {
 
 module "product_a" {
 
-  source      = "git::https://github.com/tf-init-nxp/tf_product_a_implementation.git?ref=main"
+  source      = "git::https://github.com/tf-init-nxp/tf_product_a_implementation.git?ref=v0.2"
   rg_location = local.location
   rg_name     = local.rg_name
   tags        = local.tags
