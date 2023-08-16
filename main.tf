@@ -1,5 +1,5 @@
 locals {
-  product_name = "product4"
+  product_name = "product5"
   client_name  = "fulano"
   rg_name      = format("%s-%s-%s", local.product_name, local.client_name, var.environment)
 
@@ -36,9 +36,9 @@ module "product_a" {
   postgresql_configurations = var.postgresql_configurations
 
   aks_enable                        = false
-  keyvault_enable                   = true
-  postgresql_flexible_server_enable = true
-  storage_account_enable            = false
+  keyvault_enable                   = false
+  postgresql_flexible_server_enable = false
+  storage_account_enable            = true
 
   ###
   #kured_chart_version = "4.6.0"
