@@ -12,7 +12,7 @@ locals {
 
 module "product_a" {
 
-  source      = "git::https://github.com/tf-init-nxp/tf_product_a_implementation.git?ref=v0.1"
+  source      = "git::https://github.com/tf-init-nxp/tf_product_a_implementation.git?ref=main"
   rg_location = local.location
   rg_name     = local.rg_name
   tags        = local.tags
@@ -33,9 +33,11 @@ module "product_a" {
   }
   postgresql_allowed_cidrs = { "User1" = "10.10.119.12/32", "User2" = "10.10.101.58/32" }
 
+  postgresql_configurations = var.postgresql_configurations
+
   aks_enable                        = false
   keyvault_enable                   = true
-  postgresql_flexible_server_enable = false
+  postgresql_flexible_server_enable = true
   storage_account_enable            = false
 
   ###
